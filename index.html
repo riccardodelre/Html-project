@@ -4,49 +4,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pranzo di Pasqua</title>
+    <title>Pranzo di Pasqua Perfetto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Pacifico&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-    <header>
-        <h1>Pasqua in Tavola</h1>
-        <p>Scegli la portata e scopri le ricette</p>
+    <header class="hero">
+        <div class="hero__content">
+            <h1 class="hero__title">Pasqua in Tavola 🐣</h1>
+            <p class="hero__subtitle">Scegli la portata e scopri le ricette!</p>
+            <a href="#categories" class="button">Esplora il Menù</a>
+        </div>
     </header>
 
-    <main>
-        <section>
-            <h2>Categorie</h2>
+    <main id="categories" class="container">
+        <h2 class="section-title">Le Nostre Categorie</h2>
 
-            <article>
-                <h3>Antipasti</h3>
-                <p>Inizia il pranzo con gusto.</p>
-                <a href="antipasti.html">Vedi Ricette</a>
+        <div class="grid">
+
+            <article class="category-card">
+                <div class="category-card__image" style="background-image: var(--color-secondary);">
+                </div>
+                <div class="category-card__content">
+                    <h3 class="category-card__title">Antipasti</h3>
+                    <p>Inizia il pranzo con gusto.</p>
+                    <a href="antipasti.html" class="button">Vedi Ricette</a>
+                </div>
             </article>
 
-            <article>
-                <h3>Primi</h3>
-                <p>Pasta, risotti e tanto altro.</p>
-                <a href="primi.html">Vedi Ricette</a>
+            <article class="category-card">
+                <div class="category-card__image"
+                    style= "background-image: var(--color-secondary);">
+                </div>
+                <div class="category-card__content">
+                    <h3 class="category-card__title">Primi</h3>
+                    <p>Pasta, risotti e tanto altro.</p>
+                    <a href="primi.html" class="button">Vedi Ricette</a>
+                </div>
             </article>
 
-            <article>
-                <h3>Secondi</h3>
-                <p>La tradizione nei piatti principali.</p>
-                <a href="secondi.html">Vedi Ricette</a>
+            <article class="category-card">
+                <div class="category-card__image"
+                    style= "background-image: var(--color-secondary);">
+                </div>
+                <div class="category-card__content">
+                    <h3 class="category-card__title">Secondi</h3>
+                    <p>La tradizione nei piatti principali.</p>
+                    <a href="secondi.html" class="button">Vedi Ricette</a>
+                </div>
             </article>
 
-            <article>
-                <h3>Dolci</h3>
-                <p>Concludi in dolcezza.</p>
-                <a href="dolci.html">Vedi Ricette</a>
+            <article class="category-card">
+                <div class="category-card__image"
+                    style= "background-image: var(--color-secondary);">
+                </div>
+                <div class="category-card__content">
+                    <h3 class="category-card__title">Dolci</h3>
+                    <p>Concludi in dolcezza.</p>
+                    <a href="dolci.html" class="button">Vedi Ricette</a>
+                </div>
             </article>
 
-        </section>
+        </div>
     </main>
 
-    <footer>
-        <p>Buona Pasqua!</p>
+    <footer class="footer">
+        <p>🐰 Buona Pasqua a tutti! 🌷</p>
     </footer>
 
 </body>

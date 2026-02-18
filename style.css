@@ -1,61 +1,283 @@
-/* Reset base */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root {
+    --color-primary: #FFB7B2;
+    --color-secondary: #B5EAD7;
+    --color-accent: #E2F0CB;
+    --color-text: #4A4A4A;
+    --color-white: #FFFFFF;
+    --font-heading: 'Pacifico', cursive;
+    --font-body: 'Nunito', sans-serif;
 }
 
-/* Stile generale */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #fdf6ec;
-    color: #333;
+    font-family: var(--font-body);
+    background-color: #FFF9F0;
+    color: var(--color-text);
     line-height: 1.6;
 }
 
-/* Header */
-header {
-    background-color: #ffb7b2;
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.hero {
+    background: linear-gradient(135deg, #FFF29E 0%, #FFB7B2 100%);
+    min-height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    border-bottom-left-radius: 50% 10%;
+    border-bottom-right-radius: 50% 10%;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 15px rgba(255, 183, 178, 0.4);
+}
+
+.hero--small {
+    min-height: 30vh;
+}
+
+.hero__content {
     padding: 2rem;
 }
 
-header h1 {
+.hero__title {
+    font-size: 3rem;
+    color: var(--color-white);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
     margin-bottom: 0.5rem;
 }
 
-/* Sezione principale */
-main {
+.hero__subtitle {
+    font-size: 1.5rem;
+    color: var(--color-white);
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.button {
+    display: inline-block;
+    background-color: var(--color-white);
+    color: var(--color-primary);
+    padding: 10px 30px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    border: none;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    color: var(--color-secondary);
+}
+
+.button--secondary {
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 2rem;
 }
 
-/* Titolo sezione */
-section h2 {
+.section-title {
     text-align: center;
+    font-size: 3rem;
     margin-bottom: 2rem;
+    color: var(--color-text);
 }
 
-/* Articoli (categorie) */
-article {
-    background-color: #ffffff;
-    padding: 1rem;
-    margin-bottom: 1.5rem;
-    border-radius: 8px;
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
 }
 
-/* Link */
-a {
-    display: inline-block;
-    margin-top: 0.5rem;
-    color: #ff6f61;
-    text-decoration: none;
-    font-weight: bold;
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
-/* Footer */
-footer {
+@media (min-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+.category-card {
+    background: var(--color-white);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
     text-align: center;
-    padding: 1rem;
-    background-color: #e2f0cb;
-    margin-top: 2rem;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+}
+
+.category-card__image {
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    background-color: #eee;
+}
+
+.category-card__content {
+    padding: 1.5rem;
+}
+
+.category-card__title {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-text);
+}
+
+
+.recipe-card {
+    background: var(--color-white);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
+}
+
+.recipe-card__image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    background-color: #eee;
+}
+
+.recipe-card__tag {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--color-white);
+    color: var(--color-primary);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-card__content {
+    padding: 1.5rem;
+}
+
+.recipe-card__title {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-text);
+}
+
+.recipe-card__description {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+
+.expandable__state {
+    display: none;
+}
+
+.expandable__wrap {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease-out;
+}
+
+.expandable__target {
+    padding-top: 1rem;
+}
+
+.expandable__state:checked~.expandable__wrap {
+    max-height: 1000px;
+    /* Arbitrary large height */
+    transition: max-height 0.5s ease-in;
+}
+
+.expandable__target h4 {
+    color: var(--color-secondary);
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+.expandable__target ul {
+    margin-left: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.expandable__trigger {
+    cursor: pointer;
+    display: inline-block;
+    padding: 0 0.5em;
+    color: var(--color-primary);
+    font-size: 0.9em;
+    line-height: 2;
+    border: 1px solid var(--color-primary);
+    border-radius: 20px;
+    margin-top: 0.5rem;
+    transition: 0.3s;
+}
+
+.expandable__trigger:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.expandable__trigger:before {
+    content: 'Leggi la Ricetta 🌸';
+}
+
+.expandable__state:checked~.expandable__trigger:before {
+    content: 'Chiudi 🍃';
+}
+
+
+.footer {
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+    background: var(--color-accent);
+    color: var(--color-text);
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+}
+
+
+.text-center {
+    text-align: center;
+}
+
+.margin-bottom {
+    margin-bottom: 2rem;
 }

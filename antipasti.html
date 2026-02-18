@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antipasti di Pasqua - Ricette</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Pacifico&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header class="hero hero--small">
+        <div class="hero__content">
+            <h1 class="hero__title">Antipasti</h1>
+            <p class="hero__subtitle">Inizia il pranzo con queste delizie.</p>
+            <a href="index.html" class="button button--secondary">← Torna al Menù</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="grid">
+
+            <!-- Ricetta 1 -->
+            <article class="recipe-card">
+                <div class="recipe-card__image"
+                    style= "background-image: var(--color-secondary);">
+                    <span class="recipe-card__tag">Antipasto</span>
+                </div>
+                <div class="recipe-card__content">
+                    <h3 class="recipe-card__title">Torta Pasqualina</h3>
+                    <p class="recipe-card__description">La regina delle torte salate liguri.</p>
+
+                    <input type="checkbox" id="ant1" class="expandable__state">
+                    <div class="expandable__wrap">
+                        <div class="expandable__target">
+                            <h4>Ingredienti:</h4>
+                            <ul>
+                                <li>500g Pasta sfoglia</li>
+                                <li>600g Spinaci</li>
+                                <li>400g Ricotta</li>
+                                <li>6 Uova</li>
+                            </ul>
+                            <h4>Procedimento:</h4>
+                            <p>Cuocere gli spinaci, unire ricotta e uova sode all'interno della sfoglia.</p>
+                        </div>
+                    </div>
+                    <label for="ant1" class="expandable__trigger"></label>
+                </div>
+            </article>
+
+            <!-- Recipe 2 -->
+            <article class="recipe-card">
+                <div class="recipe-card__image"
+                    style= "background-image: var(--color-secondary);">
+                    <span class="recipe-card__tag">Antipasto</span>
+                </div>
+                <div class="recipe-card__content">
+                    <h3 class="recipe-card__title">Benedetto Pugliese</h3>
+                    <p class="recipe-card__description">Un antipasto ricco con salame, uova e arance.</p>
+
+                    <input type="checkbox" id="ant2" class="expandable__state">
+                    <div class="expandable__wrap">
+                        <div class="expandable__target">
+                            <h4>Ingredienti:</h4>
+                            <ul>
+                                <li>Salame a fette</li>
+                                <li>Uova sode</li>
+                                <li>Arance</li>
+                                <li>Ricotta salata</li>
+                            </ul>
+                            <h4>Procedimento:</h4>
+                            <p>Disporre le fette di salame con sopra una fetta d'arancia e l'uovo.</p>
+                        </div>
+                    </div>
+                    <label for="ant2" class="expandable__trigger"></label>
+                </div>
+            </article>
+
+            <!-- ricetta 3 -->
+            <article class="recipe-card">
+                <div class="recipe-card__image"
+                    style= "background-image: var(--color-secondary);">
+                    <span class="recipe-card__tag">Antipasto</span>
+                </div>
+                <div class="recipe-card__content">
+                    <h3 class="recipe-card__title">Uova Ripiene</h3>
+                    <p class="recipe-card__description">Classiche uova sode con ripieno cremoso al tonno.</p>
+
+                    <input type="checkbox" id="ant3" class="expandable__state">
+                    <div class="expandable__wrap">
+                        <div class="expandable__target">
+                            <h4>Ingredienti:</h4>
+                            <ul>
+                                <li>6 Uova sode</li>
+                                <li>100g Tonno</li>
+                                <li>Maionese</li>
+                                <li>Capperi</li>
+                            </ul>
+                            <h4>Procedimento:</h4>
+                            <p>Tagliare le uova, frullare i tuorli con tonno e maionese, riempire gli albumi.</p>
+                        </div>
+                    </div>
+                    <label for="ant3" class="expandable__trigger"></label>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>🐰 Buona Pasqua a tutti! 🌷</p>
+    </footer>
+
+</body>
+
+</html>
