@@ -1,0 +1,61 @@
+/* Reset base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Stile generale */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fdf6ec;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #ffb7b2;
+    text-align: center;
+    padding: 2rem;
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+}
+
+/* Sezione principale */
+main {
+    padding: 2rem;
+}
+
+/* Titolo sezione */
+section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Articoli (categorie) */
+article {
+    background-color: #ffffff;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+}
+
+/* Link */
+a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: #ff6f61;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #e2f0cb;
+    margin-top: 2rem;
+}
