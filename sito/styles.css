@@ -93,6 +93,11 @@ a {
     color: var(--color-white);
 }
 
+.button--secondary:hover {
+    color: var(--color-white);
+    background-color: #8fd4b8;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -114,13 +119,13 @@ a {
 
 @media (min-width: 768px) {
     .grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 
 @media (min-width: 1024px) {
     .grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
