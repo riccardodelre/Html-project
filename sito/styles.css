@@ -67,16 +67,16 @@ a {
     color: var(--color-white);
     margin-bottom: 1rem;
     font-weight: 700;
-} 
+}
 
 .hero__tradition {
-    font-size: 1.1rem;
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
     color: var(--color-white);
-    max-width: 600px;
+    max-width: 900px;
     margin: 0 auto 2rem;
-    font-style: italic;
-    opacity: 0.9;
-    line-height: 1.4;
+    opacity: 0.95;
+    line-height: 1.5;
 }
 
 .hero {
@@ -159,11 +159,21 @@ a {
     transform: translateY(-5px);
 }
 
+.category-card__image-link {
+    display: block;
+    cursor: pointer;
+}
+
 .category-card__image {
     height: 250px;
     background-size: cover;
     background-position: center;
     background-color: #eee;
+}
+
+.recipe-card__image-label {
+    display: block;
+    cursor: pointer;
 }
 
 .category-card__content {
@@ -242,7 +252,6 @@ a {
 
 .expandable__state:checked~.expandable__wrap {
     max-height: 1000px;
-    /* Arbitrary large height */
     transition: max-height 0.5s ease-in;
 }
 
