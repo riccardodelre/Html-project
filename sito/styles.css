@@ -243,7 +243,9 @@ a {
 .expandable__wrap {
     overflow: hidden;
     max-height: 0;
-    transition: max-height 0.5s ease-out;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: max-height 0.5s ease-out, opacity 0.4s ease, transform 0.4s ease;
 }
 
 .expandable__target {
@@ -252,7 +254,9 @@ a {
 
 .expandable__state:checked~.expandable__wrap {
     max-height: 1000px;
-    transition: max-height 0.5s ease-in;
+    opacity: 1;
+    transform: translateY(0);
+    transition: max-height 0.5s ease-in, opacity 0.4s ease, transform 0.4s ease;
 }
 
 .expandable__target h4 {
@@ -276,7 +280,7 @@ a {
     border: 1px solid var(--color-primary);
     border-radius: 20px;
     margin-top: 0.5rem;
-    transition: 0.3s;
+    transition: 10s;
 }
 
 .expandable__trigger:hover {
